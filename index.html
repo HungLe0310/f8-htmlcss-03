@@ -13,7 +13,15 @@
         />
         <!-- Reset CSS -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
+        <!-- styles -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <!-- responsive -->
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
+        <!-- Animation -->
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
         <!-- Favicon -->
         <link
             rel="apple-touch-icon"
@@ -95,7 +103,19 @@
     <body>
         <div class="nav-sticky">
             <div class="container">
+                <!-- PC header -->
                 <div class="header-top">
+                    <label class="menu-mobile" for="mobile-check">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
                     <!-- Logo -->
                     <a href="/">
                         <div class="logo">
@@ -133,11 +153,49 @@
                     <!-- Action -->
                     <div class="header-action">
                         <a href="#!" class="header-action__login">Log In</a>
-                        <a href="#!" class="btn header-action__signup"
-                            >Sign Up</a
-                        >
+                        <a href="#!" class="btn header-action__signup">
+                            Sign Up
+                        </a>
                     </div>
                 </div>
+                <!-- Mobile header -->
+                <header class="mobile-header">
+                    <input
+                        class="menu-input"
+                        hidden
+                        type="checkbox"
+                        name="mobile-check"
+                        id="mobile-check"
+                    />
+                    <label for="mobile-check" class="overlay"></label>
+                    <div class="menu-content">
+                        <ul class="navbar__list">
+                            <li class="navbar__item">
+                                <a
+                                    href="#!"
+                                    class="navbar__link navbar__link--action"
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> Services </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> About </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> Doctors </a>
+                            </li>
+                            <li class="navbar__item hide-in-mobile separate">
+                                <a href="#!" class="navbar__link"> Log in</a>
+                            </li>
+                            <li class="navbar__item hide-in-mobile">
+                                <a href="#!" class="navbar__link"> Sign Up </a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
             </div>
         </div>
         <!-- Hero -->
@@ -145,7 +203,7 @@
             <div class="container">
                 <section class="hero">
                     <section class="hero__content">
-                        <h1 class="hero__heading">
+                        <h1 class="hero__heading" data-aos="fade-right">
                             Exceptional dental care for all ages.
                         </h1>
                         <p class="hero__desc">
@@ -186,6 +244,7 @@
                     <div class="service__content">
                         <figure class="service__image">
                             <img
+                                data-aos="flip-down"
                                 class="service__img"
                                 src="./assets/img/service.jpg"
                                 alt=""
@@ -267,9 +326,11 @@
                                     </p>
                                 </section>
                             </div>
-                            <a href="#!" class="btn service-item__btn"
-                                >All Services</a
-                            >
+                            <div class="action">
+                                <a href="#!" class="btn service-item__btn">
+                                    All Services
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -277,11 +338,13 @@
             <!-- Guide -->
             <section class="guide">
                 <div class="container">
-                    <h2 class="sub-heading guide__heading">How it works</h2>
-                    <p class="sub-desc guide__desc">
-                        Exceptional dental care for all ages. Your great smile
-                        begins with a great dentist.
-                    </p>
+                    <div class="guide__heading-text">
+                        <h2 class="sub-heading guide__heading">How it works</h2>
+                        <p class="sub-desc guide__desc">
+                            Exceptional dental care for all ages. Your great
+                            smile begins with a great dentist.
+                        </p>
+                    </div>
                     <div class="guide__list">
                         <!-- Guide item 1 -->
                         <div class="guide-item">
@@ -348,15 +411,21 @@
                             </div>
                         </figure>
                         <section class="feature-row__text">
-                            <h2 class="sub-heading feature-row__heading">
-                                Take back your smile with shine.
-                            </h2>
-                            <p class="sub-desc feature-row__desc">
-                                If you’re missing multiple teeth due to decay,
-                                injury, or the natural aging process, dentures
-                                might be the perfect solution.
-                            </p>
-                            <a href="" class="btn feature__btn">Learn More</a>
+                            <div class="feature-heading__text">
+                                <h2 class="sub-heading feature-row__heading">
+                                    Take back your smile with shine.
+                                </h2>
+                                <p class="sub-desc feature-row__desc">
+                                    If you’re missing multiple teeth due to
+                                    decay, injury, or the natural aging process,
+                                    dentures might be the perfect solution.
+                                </p>
+                            </div>
+                            <div class="feature__button">
+                                <a href="#!" class="btn feature__btn">
+                                    Learn More
+                                </a>
+                            </div>
                         </section>
                     </div>
                 </div>
@@ -568,7 +637,7 @@
                                         from a narrow perspective. You go to the
                                         hospital.
                                     </p>
-                                    <a href="" class="blog__card-more">
+                                    <a href="#!" class="blog__card-more">
                                         Learn More
                                     </a>
                                 </div>
@@ -591,7 +660,7 @@
                                         from a narrow perspective. You go to the
                                         hospital.
                                     </p>
-                                    <a href="" class="blog__card-more">
+                                    <a href="#!" class="blog__card-more">
                                         Learn More
                                     </a>
                                 </div>
@@ -757,5 +826,9 @@
                 </div>
             </div>
         </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
